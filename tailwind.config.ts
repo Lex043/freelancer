@@ -8,18 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      animation: {
-        marquee: "marquee 15s linear infinite",
-      },
-      keyframes: {
-        marquee: {
-          // from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-100%)" },
-        },
-      },
       colors: {
-        "orange-red": "#FE5824"
+        "orange-red": "#FE5824",
+        "pale-peach": "#F7E9D1"
       },
+
     },
   },
   plugins: [],
