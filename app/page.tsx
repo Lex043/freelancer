@@ -1,3 +1,7 @@
+"use client"
+
+import { useEffect } from "react";
+import Lenis from "lenis";
 import Hero from "@/components/hero";
 import About from "@/components/about";
 import Audience from "@/components/audience";
@@ -8,6 +12,15 @@ import Faq from "@/components/faq";
 import Footer from "@/components/footer"
 
 export default function Home() {
+    useEffect(() => {
+        const lenis = new Lenis();
+
+        const raf = (time: number) => {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        };
+        requestAnimationFrame(raf);
+    }, []);
     return (
         <main className="min-h-screen bg-[#F5F5F5]">
             <Hero />
