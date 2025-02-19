@@ -47,11 +47,12 @@ const duplicatedImages = [...images, ...images];
 
 export default function Team() {
     return (
-        <section className="bg-pale-peach xl:py-20">
-            <div className="container mx-auto">
-                <h1 className="text-black xl:text-[80px] w-full px-4 xl:px-10 font-medium !leading-none">Brains
+        <section className="bg-pale-peach py-10 xl:py-20">
+            <div className="container mx-auto px-4 lg:px-10">
+                <h1 className="text-5xl text-center md:text-left text-black xl:text-[80px] w-full font-medium xl:!leading-none">Brains
                     Behind <br/> Our Vision.
                 </h1>
+            </div>
                 <section className="relative overflow-hidden w-full mt-24">
                     <motion.div
                         className="flex items-center gap-6 w-max"
@@ -62,15 +63,15 @@ export default function Team() {
                             repeat: Infinity,
                         }}
                     >
-                        {duplicatedImages.map((image) => (
-                            <div key={image.id}>
+                        {duplicatedImages.map((image, index) => (
+                            <div key={`${image.id}-${index}`}>
                                 <figure
                                     className="w-[348px] h-[420px] flex-shrink-0">
                                     <Image
                                         className="w-full h-full object-cover"
                                         src={image.image}
                                         width={348}
-                                        height={430}
+                                        height={420}
                                         alt="marquee image"
                                     />
                                 </figure>
@@ -82,7 +83,6 @@ export default function Team() {
                         ))}
                     </motion.div>
                 </section>
-            </div>
         </section>
     );
 }

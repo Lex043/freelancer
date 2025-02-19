@@ -14,7 +14,7 @@ export default function AudienceCard({ text, icon, className, iconStyle }: {
                 <Image className="w-full h-full" width={100} height={100}
                        src={icon} alt={icon}></Image>
             </div>
-            <p className="text-white text-xl">{text}</p>
+            <p className="text-white text-xl text-wrap">{text}</p>
         </div>
     );
 }

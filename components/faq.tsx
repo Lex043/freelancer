@@ -45,19 +45,19 @@ export default function Faq() {
     const [show, setShow] = useState<number | null>(null);
     return (
         <section
-            className="bg-orange-red pt-10 xl:pt-20 xl:pb-[92px]">
-            <div className="container mx-auto">
-                <h1 className="font-medium xl:text-9xl text-white px-4 xl:px-10">FAQ’S</h1>
-                <div className="xl:mt-[76px] border-[#DCDCDC] border-t border-b">
+            className="bg-orange-red pt-10 xl:pt-20 pb-11 xl:pb-[92px]">
+            <div className="container mx-auto px-4 lg:px-10">
+                <h1 className="font-medium text-5xl xl:text-9xl text-white">FAQ’S</h1>
+                <div className="mt-9 xl:mt-[76px] border-[#DCDCDC] border-t border-b">
                     {accordion.map((list) => (
                         <article
                             onClick={() => setShow(show === list.id ? null : list.id)}
-                            className={`flex justify-between cursor-pointer ${list.id === accordion.length ? "border-none" : "border-b"} border-b-[#DCDCDC] items-center  px-10 py-5`}
+                            className={`flex justify-between cursor-pointer ${list.id === accordion.length ? "border-none" : "border-b"} border-b-[#DCDCDC] items-center py-5`}
                             key={list.id}>
                             <div>
-                                <h1 className="text-white font-light text-[24px]">{list.question}</h1>
+                                <h1 className="text-white font-light text-lg md:text-[24px]">{list.question}</h1>
                                 {show === list.id && (
-                                    <p className="text-white font-light pt-5">{list.answer}</p>
+                                    <p className="text-white text-sm md:text-base font-light pt-5">{list.answer}</p>
                                 )}
                             </div>
                             <Image src="/images/arrowDown.svg" width={24}

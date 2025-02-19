@@ -8,9 +8,9 @@ export default function Hero() {
     return (
         <header
             className="relative bg-[url(/images/hero.webp)] bg-cover bg-center h-screen w-full">
-            <div className="container mx-auto">
+            <div className="container mx-auto px-4 lg:px-10">
                 <nav
-                    className="flex items-center justify-between px-4 lg:px-10 py-5">
+                    className="flex items-center justify-between py-5">
                     <div className="flex gap-3 cursor-pointer">
                         <figure>
                             <Image src="/images/logo.svg" width={300} height={300}
@@ -36,7 +36,7 @@ export default function Hero() {
                     <ul
                         className={`${
                             showMenu ? "flex" : "hidden"
-                        } font-outfit absolute left-0 top-24 z-20 h-svh w-full flex-col gap-10 bg-[#F7F0FF] px-4 py-[61px] md:top-36 lg:hidden`}
+                        } font-outfit absolute left-0 top-24 z-20 h-svh w-full flex-col gap-10 bg-[#444444] px-4 py-[61px] md:top-36 lg:hidden`}
                     >
                         {menu.map((menu) => (
                             <div
@@ -59,14 +59,14 @@ export default function Hero() {
                         <div
                             className="relative flex h-1 w-8 flex-col items-center justify-center">
                         <span
-                            className={`block h-1 w-8 bg-[#ffb800] transition-transform ${
+                            className={`block h-1 w-8 bg-white transition-transform ${
                                 showMenu
                                     ? "translate-y-0 rotate-45"
                                     : "-translate-y-[5px]"
                             }`}
                         />
                             <span
-                                className={`block h-1 w-8 bg-[#ffb800] transition-transform ${
+                                className={`block h-1 w-8 bg-white transition-transform ${
                                     showMenu
                                         ? "translate-y-0 -rotate-45"
                                         : "translate-y-[5px]"
@@ -80,10 +80,10 @@ export default function Hero() {
                     </button>
                 </nav>
                 <h1
-                    className="xl:text-9xl !leading-[110px] text-white text-center xl:mt-[154px]">
+                    className="text-7xl md:text-9xl xl:!leading-[110px] text-white text-center mt-20 xl:mt-[154px]">
                     <span className="block">Create</span>
                     <span className="block">Innovate</span>
-                    <span className="block pl-48">Connect</span>
+                    <span className="block pl-8 md:pl-32 xl:pl-48">Connect</span>
                 </h1>
 
             </div>
