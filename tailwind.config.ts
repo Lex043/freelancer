@@ -10,9 +10,10 @@ const config: Config = {
     extend: {
       colors: {
         "orange-red": "#FE5824",
-        "pale-peach": "#F7E9D1"
+        "pale-peach": "#F7E9D1",
+        "light-gray": "#F5F5F5",
+        gainsboro: "#DCDCDC",
       },
-
     },
   },
   plugins: [],
