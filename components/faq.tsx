@@ -64,12 +64,18 @@ export default function Faq() {
                   {list.question}
                 </h1>
                 {show === list.id && (
-                  <p className="pt-5 text-sm font-light text-white md:text-base">
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ ease: "easeOut", duration: 0.5 }}
+                    className="pt-5 text-sm font-light text-white md:text-base"
+                  >
                     {list.answer}
-                  </p>
+                  </motion.p>
                 )}
               </div>
               <motion.div
+                  className="flex-shrink-0"
                 animate={{ rotate: show === list.id ? -45 : 0 }}
                 transition={{ ease: "easeInOut", duration: 0.4 }}
               >
