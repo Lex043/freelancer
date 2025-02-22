@@ -1,5 +1,5 @@
 "use client";
-
+import Preloader from "@/components/preloader";
 import { useEffect } from "react";
 import Lenis from "lenis";
 import Hero from "@/components/hero";
@@ -22,15 +22,18 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-light-gray">
-      <Hero />
-      <About />
-      <Audience />
-      <Services />
-      <Testimonials />
-      <Team />
-      <Faq />
-      <Footer />
-    </main>
+
+      <main className="min-h-screen bg-light-gray">
+        <Preloader />
+        <Hero />
+        <About />
+        <Audience />
+        <Services />
+        <Testimonials />
+        <Team />
+        <Faq />
+        <Footer />
+      </main>
+
   );
 }
