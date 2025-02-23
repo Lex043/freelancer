@@ -10,8 +10,8 @@ export default function Services() {
   return (
     <section className="bg-black pb-12 pt-10 xl:pb-28 xl:pt-20">
       <div className="container mx-auto px-4 lg:px-10">
-        <h1 className="max-w-[742px] text-center text-4xl font-medium text-white md:text-left xl:text-[80px] xl:!leading-none">
-          Unlocking Potential, Together
+        <h1 className="text-center text-4xl font-medium text-white md:text-left xl:text-[80px] xl:!leading-none">
+          Unlocking Potential, <br className="hidden xl:block"/> Together
         </h1>
         <section className="mt-10 xl:mt-[100px]">
           <article className="flex flex-wrap items-center justify-between gap-10 xl:flex-nowrap">

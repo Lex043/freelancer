@@ -7,7 +7,8 @@ import Image from "next/image";
 export default function Hero() {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   return (
-    <header className="relative h-screen w-full bg-[url(/images/hero.webp)] bg-cover bg-center">
+    <header
+      className="relative h-screen w-full bg-[url(/images/hero.webp)] bg-cover bg-center">
       <div className="container mx-auto px-4 lg:px-10">
         <nav className="flex items-center justify-between py-5">
           <div className="flex cursor-pointer gap-3">
@@ -23,7 +24,8 @@ export default function Hero() {
             <p className="text-base font-medium text-white">Freelancer</p>
           </div>
           <div>
-            <ul className="hidden w-full flex-col justify-end gap-6 lg:flex lg:flex-row lg:gap-12 lg:text-base">
+            <ul
+              className="hidden w-full flex-col justify-end gap-6 lg:flex lg:flex-row lg:gap-12 lg:text-base">
               {menu.map((menu) => (
                 <div
                   className="relative flex cursor-pointer items-center text-sm font-normal text-white"
@@ -50,7 +52,8 @@ export default function Hero() {
                 <p className="under">{menu.name}</p>
               </div>
             ))}
-            <button className="rounded-lg bg-orange-red px-4 py-[10px] text-white">
+            <button
+              className="rounded-lg bg-orange-red px-4 py-[10px] text-white">
               Contact Us
             </button>
           </ul>
@@ -58,7 +61,8 @@ export default function Hero() {
             className="flex shrink-0 cursor-pointer lg:hidden"
             onClick={() => setShowMenu(!showMenu)}
           >
-            <div className="relative flex h-1 w-8 flex-col items-center justify-center">
+            <div
+              className="relative flex h-1 w-8 flex-col items-center justify-center">
               <span
                 className={`block h-1 w-8 bg-white transition-transform ${
                   showMenu ? "translate-y-0 rotate-45" : "-translate-y-[5px]"
@@ -71,11 +75,13 @@ export default function Hero() {
               />
             </div>
           </div>
-          <button className="hidden rounded-lg bg-orange-red px-4 py-[10px] text-white lg:block">
+          <button
+            className="hidden rounded-lg bg-orange-red px-4 py-[10px] text-white lg:block">
             Contact Us
           </button>
         </nav>
-        <h1 className="mt-20 text-center text-7xl text-white md:text-9xl xl:mt-[154px] xl:!leading-[110px]">
+        <h1
+          className="text-center text-6xl mt-28 xl:mt-40 text-white md:text-9xl xl:!leading-[110px]">
           <span className="block">Create</span>
           <span className="block">Innovate</span>
           <span className="block pl-8 md:pl-32 xl:pl-48">Connect</span>

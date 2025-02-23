@@ -21,12 +21,14 @@ export default function About() {
     <section className="bg-[#F7E9D1] py-12 md:py-[100px]">
       <div className="container mx-auto px-4 lg:px-10">
         <header className="flex flex-col justify-between gap-6 md:flex-row">
-          <h1 className="max-w-[692px] text-center text-3xl font-medium leading-10 md:text-left md:text-6xl xl:text-9xl xl:!leading-[120px]">
+          <h1
+            className="max-w-[692px] text-center text-3xl font-medium leading-10 md:text-left md:text-6xl xl:text-9xl xl:!leading-[120px]">
             Where <br className="hidden lg:block xl:hidden" />
             Productivity <br className="hidden lg:block xl:hidden" />
             Meets <br className="hidden lg:block xl:hidden" /> Community
           </h1>
-          <p className="mx-auto max-w-[364px] text-center text-base font-normal text-[#475467] md:text-left">
+          <p
+            className="mx-auto max-w-[364px] text-center text-base font-normal text-[#475467] md:text-left">
             Step into our co-working sanctuary – where ambition ignites and
             creativity flourishes. With top-notch amenities and a vibrant
             community, fuel your drive and feed your imagination. Welcome to the
@@ -36,7 +38,7 @@ export default function About() {
       </div>
       <section className="relative mt-20 w-full overflow-hidden md:mt-[160px]">
         <motion.div
-          className="flex w-max items-center gap-4"
+          className="flex w-max whitespace-nowrap items-center gap-4"
           animate={{ x: ["0%", "-50%"] }}
           transition={{
             ease: "linear",
@@ -57,13 +59,14 @@ export default function About() {
           ))}
         </motion.div>
       </section>
+
       <section className="relative mt-4 w-full overflow-hidden">
         <motion.div
-          className="flex w-max items-center gap-4"
-          animate={{ x: ["0%", "-50%"] }}
+          className="flex w-max whitespace-nowrap items-center gap-4"
+          animate={{ x: ["-50%", "0%"] }}
           transition={{
             ease: "linear",
-            duration: 10,
+            duration: 12,
             repeat: Infinity,
           }}
         >

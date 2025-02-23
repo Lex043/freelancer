@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        helvetica: 'var(--font-helvetica), sans-serif',
+      },
       colors: {
         "orange-red": "#FE5824",
         "pale-peach": "#F7E9D1",
