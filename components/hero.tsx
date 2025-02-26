@@ -2,10 +2,15 @@
 
 import { menu } from "@/utils/constant";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Hero() {
   const [showMenu, setShowMenu] = useState<boolean>(false);
+  const variants = {
+    initial: { opacity: 0, y: 50 },
+    animate:{ opacity: 1, y: 0 }
+  }
   return (
     <header
       className="relative h-screen w-full bg-[url(/images/hero.webp)] bg-cover bg-center">
@@ -81,10 +86,28 @@ export default function Hero() {
           </button>
         </nav>
         <h1
-          className="text-center text-6xl mt-28 xl:mt-40 text-white md:text-9xl xl:!leading-[110px]">
-          <span className="block">Create</span>
-          <span className="block">Innovate</span>
-          <span className="block pl-8 md:pl-32 xl:pl-48">Connect</span>
+          className="text-center overflow-hidden text-6xl mt-28 xl:mt-40 text-white md:text-9xl xl:!leading-[110px]">
+          <motion.span variants={variants}
+                       initial="initial"
+                       viewport={{ once: true }}
+                       whileInView="animate"
+                       transition={{ delay: 2.1, duration: 0.5 }}
+                       className="block">Create
+          </motion.span>
+          <motion.span variants={variants}
+                       initial="initial"
+                       viewport={{ once: true }}
+                       whileInView="animate"
+                       transition={{ delay: 2.2, duration: 0.6 }}
+                       className="block">Innovate
+          </motion.span>
+          <motion.span variants={variants}
+                       initial="initial"
+                       viewport={{ once: true }}
+                       whileInView="animate"
+                       transition={{ delay: 2.4, duration: 0.7 }}
+                       className="block pl-8 md:pl-32 xl:pl-48">Connect
+          </motion.span>
         </h1>
       </div>
     </header>

@@ -9,7 +9,7 @@ export default function AudienceCard({ text, icon, className, iconStyle }: {
 }) {
     return (
         <div
-            className={cn("bg-black rounded-lg flex items-center gap-2 p-2", className)}>
+            className={cn("bg-black rounded-lg flex items-center gap-2 p-2 cursor-pointer", className)}>
             <div className={cn("text-white text-xl", iconStyle)}>
                 <Image className="w-full h-full" width={100} height={100}
                        src={icon} alt={icon}></Image>
